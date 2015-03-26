@@ -74,5 +74,20 @@ module.exports = {
             destructuring: true,
             classes: true
         }
+    },
+    applescript: {
+       globals: globals.applescript,
+       rules: {
+          "no-console": 0,
+          "new-cap": [2, {capIsNewExceptions: Object.keys(globals.applescript)}],
+          "global-strict": [0, "function"],
+          "no-unused-vars": [2, {"vars": "local"}],
+          "no-unused-expressions": 0
+       },
+       ecmaFeatures: {
+          forOf: true,
+          destructuring: true,
+          spread: true
+       }
     }
 };
